@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/e471b61ed1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/PemaZ..png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hello, I'm <span>P</span>ema <span>Z</span>angmo</h1>
+                <p>Teacher Trainee | Future Teacher</p>
+            </div>
+            <div class="image">
+                <img src="d:\08230173_lab02\images\photo_2025-09-17_00-43-51.jpg" class="girl" alt="Profile Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about me.jpg" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi! I'm Pema Zangmo, a passionate teacher trainee pursuing my Bachelor’s degree
+                         in ICT at Samtse College of Education. I enjoy learning, sharing knowledge, 
+                         and exploring new ways to make education more engaging. My journey from Yangneer
+                          to Samtse has shaped me into a dedicated learner with a love for teaching and 
+                          technology</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Technical Skills</span><br>HTML, CSS and Github</li>
+                            <li><span>Soft Skills</span><br>Dedication, consistency and Problem solving</li>
+                            <li><span>Teamwork</span><br>Collaborating with peers</li>
+                            <li><span>ICT Skills</span><br>Using tools effectively</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-current</span><br>B.Ed.IT at Samtse College of Education</li>
+                            <li><span>2010-2016</span><br>Yangneer Primary School</li>
+                            <li><span>2017-2020</span><br>Gongthung Middle Secondary School</li>
+                            <li><span>2021-2022</span><br>Rangjung Central School</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/portfolio1.jpg" alt="Portfolio Website Screenshot">
+                    <div class="layer">
+                        <h3>E-Portfolio</h3>
+                        <p>A personal portfolio showcasing my education, skills, and projects</p>
+                        <ul class="project-links">
+                            <li><a href="https://sites.google.com/rub.edu.bt/pema-zangmo/home" target="_blank">Portfolio Website</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/blog1.jpg" alt="Blog Screenshot">
+                    <div class="layer">
+                        <h3>Blogging</h3>
+                        <p>A simple blog created to share my thoughts and assignments.</p>
+                        <ul class="project-links">
+                            <li><a href="http://pemazangmo21.blogspot.com" target="_blank">Blogger</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>17557814</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © PemaZ. Made with <i class="fa-solid fa-heart"></i> All rights reserved</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(evt, tabname){
+            for (tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            evt.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
